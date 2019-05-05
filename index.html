@@ -4,66 +4,80 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            Liane Portfolio
+            Liane's Portfolio
         </title>
+        <link rel="icon" type="image/jpg" href="assets/images/Portfolio.JPG" />
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Navbar -->
         <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <div class="navbar-brand col-md-4 bg-info text-white" id="navbar-brand">
-                    <h1>Liane Suarez Curbelo</h1>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark default-color">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse col-md-8" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <a class="nav-link" href="index.html">About&nbsp;&nbsp;|</a>
-                        <a class="nav-link" href="portfolio.html">Portfolio&nbsp;&nbsp;|</a>
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </div>     
+                </button>                     
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
         <!-- Content -->
         <section class="container" id="sectioncontainer">
             <div class="row">
-                <div class="col-md-12 bg-info text-white">
-                    <header class="header_article">
-                        <h2>About me</h2> 
-                    </header>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-12">
-                    <hr  class="space">
+                    <h1 class="text-center display-3 text-uppercase font-weight-bold mt-4">Liane Suarez Curbelo</h1>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/Profile_Picture.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 text-center">
+                    <p class="text-center text-description">
+                        Software engineer with more than 2 years of experience in software design and application development. 
+                        Strong time management, multitasking, analytical, planning and organizational skills. 
+                        Excellent ability to learn new technologies and work in collaborative environments.
+                    </p>
+                    <form>
+                        <input class="form-control my-4 text-center" type="email" id="email" placeholder="Enter your email" required>
+                        <textarea class="form-control my-4 text-center" id="message" rows="2"  placeholder="Enter your message"required></textarea>
+                        <button type="button" class="btn btn-outline-light" onclick="enviarCorreo()">
+                            Submit
+                        </button>
+                    </form>
+                    <ul class="list-unstyled list-inline mt-4">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/liane880218?tab=repositories" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/liane-suarez-curbelo-445a4b131" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="assets/images/Profile_Picture.jpg" alt="Liane Suarez Curbelo" id="imgprofile" class="img-thumbnail">
-                </div>
-                <div class="col-md-10">
-                        <p>
-                            Software engineer with more than 2 years of experience in software design and application development. 
-                            Strong time management, multitasking, analytical, planning and organizational skills. 
-                            Interested in joining an organization where I will have enough opportunity to acquire knowledge and expand my education. 
-                            Ability to maintain confidentiality of information and support business interests through the exercise of sound judgment and discretion. 
-                            Strong accounting and financial knowledge. Excellent ability to learn new technologies and work in collaborative environments.
-                        </p>
-                </div>
-            </div>
-        </section> 
-        <!-- Sticky footer -->
-        <footer class="footer">
-            <div class="space1 bg-info"></div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer mb-1 default-color">
             <div class="container">
-                <p>Copyright ©</p>
+                <p>Copyright © 2019. All Rights Reserved</p>
             </div>
         </footer>
         <!-- Bootstrap core JavaScript -->
@@ -71,5 +85,20 @@
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
         <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+        <script>
+            function enviarCorreo() {
+                
+                var eAddress = $("#email").val();
+                var eBody = $("#message").val();
+                console.log(eAddress);
+                console.log(eBody);
+
+                if(eAddress != null && eBody != null){
+                    var email = "mailto:" + escape("lianesuarez88@gmail.com")
+                        + "?&body=" + eBody;
+                    window.location.href = email;
+                }
+            }
+        </script>
     </body>
 </html>
