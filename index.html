@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
@@ -30,18 +31,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="portfolio.html">Portfolio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- Content -->
-        <section class="container" id="sectioncontainer">
+        <section class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center display-3 text-uppercase font-weight-bold mt-4">Liane Suarez Curbelo</h1>
+                    <h1 class="text-center display-3 font-weight-bold mt-4">Liane Suarez Curbelo</h1>
                 </div>
                 <div class="col-md-6">
                     <img src="assets/images/Profile_Picture.jpg" class="img-fluid">
@@ -53,7 +51,6 @@
                         Excellent ability to learn new technologies and work in collaborative environments.
                     </p>
                     <form>
-                        <input class="form-control my-4 text-center" type="email" id="email" placeholder="Enter your email" required>
                         <textarea class="form-control my-4 text-center" id="message" rows="2"  placeholder="Enter your message"required></textarea>
                         <button type="button" class="btn btn-outline-light" onclick="enviarCorreo()">
                             Submit
@@ -80,22 +77,17 @@
                 <p>Copyright © 2019. All Rights Reserved</p>
             </div>
         </footer>
-        <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
         <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
         <script>
             function enviarCorreo() {
-                
-                var eAddress = $("#email").val();
                 var eBody = $("#message").val();
-                console.log(eAddress);
-                console.log(eBody);
-
-                if(eAddress != null && eBody != null){
+                if(eBody != null){
                     var email = "mailto:" + escape("lianesuarez88@gmail.com")
-                        + "?&body=" + eBody;
+                        + "?subject=" + escape("Message from portfolio page")
+                        + "&body=" + eBody;
                     window.location.href = email;
                 }
             }
