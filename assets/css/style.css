@@ -11,6 +11,10 @@ body {
     font-family: 'Handlee', cursive;
 }
 
+h6{
+    color: black;
+}
+
 header{
     height: 10%;
 }
